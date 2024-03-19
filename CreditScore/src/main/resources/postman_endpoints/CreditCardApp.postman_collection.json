@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "27c4f05a-38ee-4547-898c-3d9e7e51d59e",
+		"name": "CreditCardApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10552057"
+	},
+	"item": [
+		{
+			"name": "issueCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ssn\" : \"10003\",\r\n    \"card_no\"  : \"998394\",\r\n    \"cvv\" : 789,\r\n    \"holder_name\" : \"Mr.B\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/issueCard",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"issueCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditScore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/creditScore/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creditScore",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
